@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import About from './components/About';
+import Navbar from './components/Navbar';
+import TextForm from './components/TextForm';
+//import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-image">
+      <Navbar title="Text Editor" aboutText="About Me" />
+      <div className="container my-0  text-center">
+        <TextForm heading="Enter Your Text For analying" />
+        <About />
+      </div>
     </div>
   );
+
 }
 
 export default App;
